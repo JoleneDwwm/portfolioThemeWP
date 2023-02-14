@@ -1,4 +1,17 @@
 <?php
+
+function load_css(){
+
+    wp_enqueue_style('load_css', get_theme_file_uri('/style.css'));
+    wp_enqueue_style('bootstrap-cdn-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+    wp_enqueue_script('bootstrap-cdn-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js', 'jquery', false, true);
+    
+    // wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+    // wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style') ); 
+       
+}
+add_action('wp_enqueue_scripts', 'load_css');
+
 function montheme_supports(){
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
