@@ -7,7 +7,7 @@
         <div class="flipJKPM__card__front">
             <div class="card bg-dark">
                 <div class="card-body p-0">
-                    <img class="cardJKPM card-img w-100" style="object-fit:cover;" src="" alt="Card image">
+                    <?php the_post_thumbnail(array(3500,6000)); ?>
                     <div class="card-body card-img-overlay">
                         <h3 class="text-light"><?php the_title(); ?></h3>
                     </div>
