@@ -2,12 +2,12 @@
 
 <?php if (have_posts()): while (have_posts()): the_post(); ?>
 <article class="text-light">
-<div class="flipJKPM col-12">
+<div class="flipJKPM justify-content-center col-12">
     <div class="flipJKPM__card">
         <div class="flipJKPM__card__front">
             <div class="card bg-dark">
                 <div class="card-body p-0">
-                    <?php the_post_thumbnail(array(3500,6000)); ?>
+                    <?php the_post_thumbnail(array(350,600)); ?>
                     <div class="card-body card-img-overlay">
                         <h3 class="text-light"><?php the_title(); ?></h3>
                     </div>
@@ -16,7 +16,7 @@
         </div>
         <div class="flipJKPM__card__back">
             <div class="card">
-                <div class="cardJKPM card-body w-100 bg-light text-dark text-center">
+                <div class="cardJKPM card-body bg-light text-dark text-center">
                     <p><?php the_content(); ?></p>
                 </div>
             </div>
